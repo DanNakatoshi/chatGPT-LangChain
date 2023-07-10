@@ -1,4 +1,4 @@
-
+#ChatGPT.py
 import os
 import sys
 
@@ -44,7 +44,7 @@ chain = ConversationalRetrievalChain.from_llm(
 chat_history = []
 while True:
   if not query:
-    query = input("質問: ")
+    query = input("Prompt: ")
   if query in ['quit', 'q', 'exit']:
     sys.exit()
   result = chain({"question": query, "chat_history": chat_history})
